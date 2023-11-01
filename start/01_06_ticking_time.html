@@ -16,7 +16,30 @@
 
   <script>
     // Write your code here
+
+    const clock = () => {
+      const date = new Date();
+      const time = date.toLocaleTimeString();
+      const div = document.querySelector('#clock');
+
+      setInterval(() => {
+        div.textContent = time;
+      }, 1000);
+    };
+
+    clock();
     
+/*     setInterval(() => {
+
+      const d = new Date();
+
+      const h = d.getHours();
+      const m = d.getMinutes();
+      const s = d.getSeconds();
+
+      document.getElementById('clock').innerHTML = `${h}:${m}:${s}`;
+    }, 1000); */
+
   </script>
 </body>
 
